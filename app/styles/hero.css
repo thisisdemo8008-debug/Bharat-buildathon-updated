@@ -1,0 +1,544 @@
+/* ─── Bharat Buildathon Hero Section (with Background video1.webm) ─── */
+.bharat-hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ECE6D8;
+    color: #0A192F;
+    overflow: hidden;
+    padding-top: 110px;
+    padding-bottom: 50px;
+}
+
+/* ── Video Background Container ───────────────────────────────────────── */
+.bharat-hero__video-wrapper {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.bharat-hero__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+    filter: brightness(1.38) contrast(1.05) saturate(1.15);
+}
+
+.bharat-hero__video-overlay {
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    pointer-events: none;
+}
+
+.bharat-hero__container {
+    position: relative;
+    z-index: 2;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ── Content Grid (Left Video Spacer, Right Text Column) ──────────────── */
+.bharat-hero__content-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 16px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.bharat-hero__video-spacer {
+    width: 100%;
+    min-height: 440px;
+}
+
+/* ── Right Column: Eyebrow, Headline, Specs & CTAs ───────────────────── */
+.bharat-hero__text-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 65px;
+}
+
+.bharat-hero__eyebrow-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 20px;
+    background: #FFFFFF;
+    border-radius: 999px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #334155;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 24px;
+}
+
+.bharat-hero__eyebrow-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #FF6B35;
+    box-shadow: 0 0 8px #FF6B35;
+    animation: eyebrow-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes eyebrow-pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.4); opacity: 0.6; }
+}
+
+.bharat-hero__headline {
+    margin: 0;
+    font-family: 'Epilogue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 0.94;
+}
+
+.bharat-hero__title-bharat {
+    font-size: clamp(2.8rem, 4.8vw, 4.8rem);
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: 0.04em;
+    display: inline-flex;
+    align-items: center;
+}
+
+.bharat-letter-orange {
+    color: #E05600;
+}
+
+.bharat-letter-white {
+    color: #FFFFFF;
+    -webkit-text-stroke: 2.5px #0A192F;
+    paint-order: stroke fill;
+}
+
+.bharat-letter-green {
+    color: #15803D;
+}
+
+.bharat-hero__title-buildathon {
+    font-size: clamp(2.8rem, 4.8vw, 4.8rem);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: #0A192F;
+}
+
+.bharat-hero__title-ideathon {
+    font-size: clamp(2.1rem, 3.8vw, 3.6rem);
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: transparent;
+    -webkit-text-stroke: 2.5px #0A192F;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 4px;
+}
+
+.bharat-hero__tricolor-bar {
+    display: inline-block;
+    width: 6px;
+    height: 48px;
+    background: linear-gradient(to bottom, #FF6B35 33%, #FFFFFF 33%, #FFFFFF 66%, #0E9F6E 66%);
+    border: 1px solid #0A192F;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.bharat-hero__tagline {
+    font-family: 'Epilogue', sans-serif;
+    font-size: clamp(1.05rem, 1.4vw, 1.3rem);
+    font-style: italic;
+    font-weight: 700;
+    color: #1E293B;
+    margin: 16px 0 0 0;
+}
+
+.bharat-hero__tagline span.tagline-viksit {
+    color: #FF6B35;
+    font-weight: 800;
+}
+
+.bharat-hero__tagline span.tagline-bharat {
+    color: #15803D;
+    font-weight: 800;
+}
+
+.bharat-hero__desc {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.55;
+    margin: 14px 0 24px 0;
+    max-width: 500px;
+}
+
+/* ── Horizontal Specs Capsule Bar ─────────────────────────────────────── */
+.bharat-specs-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background: #FFFFFF;
+    padding: 12px 16px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    width: 100%;
+    margin-bottom: 28px;
+}
+
+.bharat-spec-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 8px;
+    transition: transform 0.25s ease;
+}
+
+.bharat-spec-item:hover {
+    transform: translateY(-2px);
+}
+
+.bharat-spec-item__icon {
+    font-size: 1.1rem;
+    background: #F1F5F9;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.bharat-spec-item__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bharat-spec-item__label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: #94A3B8;
+}
+
+.bharat-spec-item__val {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0F172A;
+    white-space: nowrap;
+}
+
+/* ── Action Buttons & Floating QR Code Box Row ────────────────────────── */
+.bharat-hero__action-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.bharat-hero__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.bharat-hero__btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 36px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #D97706 0%, #0E9F6E 100%);
+    color: #FFFFFF;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    box-shadow: 0 10px 28px rgba(14, 159, 110, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.bharat-hero__btn-primary:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 14px 36px rgba(14, 159, 110, 0.45);
+}
+
+.bharat-hero__btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 28px;
+    border-radius: 999px;
+    background: #FFFFFF;
+    border: 1.5px solid #CBD5E1;
+    color: #1E293B;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.bharat-hero__btn-secondary:hover {
+    background: #1E293B;
+    border-color: #1E293B;
+    color: #FFFFFF;
+}
+
+/* Floating QR Code Box */
+.bharat-qr-box {
+    position: relative;
+    background: #FFFFFF;
+    padding: 12px 20px;
+    border-radius: 18px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    animation: qr-levitate 3.6s ease-in-out infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bharat-qr-box:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12);
+}
+
+@keyframes qr-levitate {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+.bharat-qr-box__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bharat-qr-box__title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #334155;
+}
+
+.bharat-qr-box__arrow {
+    width: 28px;
+    height: 28px;
+    margin-top: 2px;
+}
+
+.bharat-qr-box__arrow-path {
+    stroke-dasharray: 6 6;
+    animation: arrow-dash 1.8s linear infinite;
+}
+
+@keyframes arrow-dash {
+    to { stroke-dashoffset: -12; }
+}
+
+.bharat-qr-box__frame {
+    width: 68px;
+    height: 68px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1.5px solid #E2E8F0;
+    padding: 4px;
+    background: #FFFFFF;
+    flex-shrink: 0;
+}
+
+.bharat-qr-svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* ── Bottom Partners Section ──────────────────────────────────────────── */
+.bharat-partners-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 10px;
+}
+
+.bharat-partners-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bharat-partners-title {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #0A192F;
+}
+
+.bharat-partners-brush {
+    width: 180px;
+    height: 4px;
+    background: linear-gradient(to right, #FF6B35 0%, #0E9F6E 100%);
+    border-radius: 999px;
+    margin-top: 4px;
+    opacity: 0.6;
+}
+
+.bharat-partners-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    background: #FFFFFF;
+    padding: 16px 36px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1.5px solid rgba(226, 232, 240, 0.8);
+    flex-wrap: wrap;
+}
+
+.bharat-partner-logo {
+    height: 36px;
+    width: auto;
+    max-width: 170px;
+    object-fit: contain;
+    transition: transform 0.25s ease;
+}
+
+.bharat-partner-logo:hover {
+    transform: scale(1.05);
+}
+
+.bharat-partners-subtext {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #0A192F;
+    margin: 4px 0 0 0;
+}
+
+/* ── Mobile Responsive Rules ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .bharat-hero__content-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .bharat-hero__video-spacer {
+        display: none;
+    }
+    .bharat-hero__text-col {
+        align-items: center;
+        text-align: center;
+        padding-left: 0;
+    }
+    .bharat-hero__headline {
+        align-items: center;
+    }
+    .bharat-specs-bar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .bharat-hero__action-row {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .bharat-hero {
+        padding-top: 95px;
+        padding-bottom: 40px;
+    }
+    .bharat-hero__container {
+        padding: 0 16px;
+    }
+    .bharat-hero__title-bharat,
+    .bharat-hero__title-buildathon {
+        font-size: clamp(2.2rem, 8.5vw, 3.5rem);
+    }
+    .bharat-hero__title-ideathon {
+        font-size: clamp(1.8rem, 6.8vw, 2.6rem);
+    }
+    .bharat-hero__eyebrow-badge {
+        font-size: 0.78rem;
+        padding: 6px 14px;
+    }
+    .bharat-specs-bar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 10px;
+    }
+    .bharat-spec-item__val {
+        font-size: 0.76rem;
+    }
+    .bharat-hero__action-row {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+    .bharat-hero__actions {
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .bharat-hero__btn-primary,
+    .bharat-hero__btn-secondary {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 0.92rem;
+    }
+    .bharat-qr-box {
+        width: 100%;
+        justify-content: center;
+    }
+    .bharat-partners-card {
+        gap: 16px;
+        padding: 12px 18px;
+    }
+    .bharat-partner-logo {
+        height: 28px;
+    }
+    .bharat-hero__video {
+        object-position: center center;
+        opacity: 0.88;
+    }
+}
+
+@media (max-width: 480px) {
+    .bharat-specs-bar {
+        /* Keep 2-col at 480px — single col wastes too much vertical space.
+           responsive.css handles the 360px floor. */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
