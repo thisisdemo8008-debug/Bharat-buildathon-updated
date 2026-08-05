@@ -15,6 +15,7 @@ import TransitionScribble from '@/components/TransitionScribble';
 import CursorBubble from '@/components/CursorBubble';
 import SmoothScroll from '@/components/SmoothScroll';
 import HorizontalWords from '@/components/HorizontalWords';
+import Theme from '@/components/Theme';
 
 export default function Home() {
     return (
@@ -30,6 +31,9 @@ export default function Home() {
             <main>
                 <div className="content-section motion-cards-wrapper" id="about">
                     <About />
+                </div>
+                <div id="theme">
+                    <Theme />
                 </div>
                 <div id="rounds">
                     <Rounds />
